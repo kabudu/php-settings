@@ -67,5 +67,4 @@ interface SettingHandlerInterface
      * @return mixed
      */
     public function setCacheHandler($handler);
-
 }
