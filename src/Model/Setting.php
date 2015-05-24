@@ -109,10 +109,10 @@ class Setting implements SettingInterface
      */
     public function getAsArray()
     {
-        return [
+        return array(
             'key'   =>  $this->getKey(),
             'value' =>  $this->getValue(),
             'environment'   =>  $this->getEnvironment()
-        ];
+        );
     }
 }

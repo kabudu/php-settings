@@ -29,12 +29,12 @@ class Feature implements FeatureInterface
     /**
      * @var SettingInterface[]
      */
-    protected $settings = [];
+    protected $settings = array();
 
     /**
      * @var SettingGroupInterface[]
      */
-    protected $settingGroups = [];
+    protected $settingGroups = array();
 
     /**
      * Get the name
