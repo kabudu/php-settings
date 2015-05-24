@@ -15,49 +15,74 @@
 
 namespace Settings\Model;
 
-/**
- * Setting group interface for a setting group
- *
- * Interface SettingGroupInterface
- * @package Settings\Model
- */
-interface SettingGroupInterface
+class SettingGroup implements SettingGroupInterface
 {
+    /**
+     * @var string
+     */
+    protected $name;
+
+    /**
+     * @var SettingInterface[]
+     */
+    protected $settings;
+
     /**
      * Get the name
      *
      * @return mixed
      */
-    public function getName();
+    public function getName()
+    {
+        return $this->name;
+    }
 
     /**
      * Set the name
      *
      * @param string $name
-     * @return mixed
+     * @return SettingGroupInterface
      */
-    public function setName($name);
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
 
     /**
      * Add a setting
      *
      * @param SettingInterface $setting
-     * @return mixed
+     * @return SettingGroupInterface
      */
-    public function addSetting(SettingInterface $setting);
+    public function addSetting(SettingInterface $setting)
+    {
+        $this->settings[] = $setting;
+
+        return $this;
+    }
 
     /**
      * Get settings
      *
      * @return SettingInterface[]
      */
-    public function getSettings();
+    public function getSettings()
+    {
+        return $this->settings;
+    }
 
     /**
      * Set settings for this setting group
      *
      * @param array $settings
-     * @return mixed
+     * @return SettingGroupInterface
      */
-    public function setSettings(array $settings);
+    public function setSettings(array $settings)
+    {
+        $this->settings = $settings;
+
+        return $this;
+    }
 }

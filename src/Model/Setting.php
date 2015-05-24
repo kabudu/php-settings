@@ -15,6 +15,10 @@
 
 namespace Settings\Model;
 
+/**
+ * Class Setting
+ * @package Settings\Model
+ */
 class Setting implements SettingInterface
 {
     /**
@@ -111,6 +115,4 @@ class Setting implements SettingInterface
             'environment'   =>  $this->getEnvironment()
         ];
     }
-
-
 }

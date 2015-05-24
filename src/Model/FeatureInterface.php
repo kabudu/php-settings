@@ -67,4 +67,20 @@ interface FeatureInterface
      * @return SettingGroupInterface[]
      */
     public function getSettingGroups();
+
+    /**
+     * Set settings for this feature
+     *
+     * @param SettingInterface[] $settings
+     * @return mixed
+     */
+    public function setSettings(array $settings);
+
+    /**
+     * Set setting groups for this feature
+     *
+     * @param SettingGroupInterface[] $settingGroups
+     * @return mixed
+     */
+    public function setSettingGroups(array $settingGroups);
 }

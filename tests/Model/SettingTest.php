@@ -18,6 +18,10 @@ namespace tests\Settings\Model;
 use Settings\Model\Setting;
 use Settings\Model\SettingInterface;
 
+/**
+ * Class SettingTest
+ * @package tests\Settings\Model
+ */
 class SettingTest extends \PHPUnit_Framework_TestCase
 {
     /**
