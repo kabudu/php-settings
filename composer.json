@@ -10,7 +10,9 @@
     }
   ],
   "autoload": {
-    "psr-4": { "Settings" : "src/" }
+    "psr-4": {
+      "Settings\\" : "src/"
+    }
   },
   "require": {
     "php": ">=5.3.3",

@@ -65,4 +65,11 @@ interface SettingInterface
      * @return mixed
      */
     public function setEnvironment($environment);
+
+    /**
+     * Get the properties as an array
+     *
+     * @return mixed
+     */
+    public function getAsArray();
 }
