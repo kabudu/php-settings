@@ -115,4 +115,17 @@ class Setting implements SettingInterface
             'environment'   =>  $this->getEnvironment()
         );
     }
+
+    /**
+     * Hydrate (populate) the setting
+     *
+     * @param array $data
+     * @return void
+     */
+    public function hydrate(array $data)
+    {
+        $this->setKey($data['key']);
+        isset($data['environment']) ? $this->setEnvironment($data['environment']) : FALSE;
+        $this->setValue($data['value']);
+    }
 }

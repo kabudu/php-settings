@@ -72,4 +72,12 @@ interface SettingInterface
      * @return mixed
      */
     public function getAsArray();
+
+    /**
+     * Hydrate the setting
+     *
+     * @param array $data
+     * @return mixed
+     */
+    public function hydrate(array $data);
 }

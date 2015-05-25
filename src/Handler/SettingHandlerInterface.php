@@ -40,10 +40,9 @@ interface SettingHandlerInterface
      *
      * @param string $key
      * @param mixed $value
-     * @param mixed $default
      * @return mixed
      */
-    public function set($key, $value, $default = NULL);
+    public function set($key, $value);
 
     /**
      * Set a storage strategy for this handler
@@ -64,7 +63,15 @@ interface SettingHandlerInterface
      * Set a cache handler
      *
      * @param PoolInterface|DriverInterface $handler
+     * @param integer $expiry
      * @return mixed
      */
-    public function setCacheHandler($handler);
+    public function setCacheHandler($handler, $expiry);
+
+    /**
+     * Get the cache handler
+     *
+     * @return PoolInterface|DriverInterface
+     */
+    public function getCacheHandler();
 }
